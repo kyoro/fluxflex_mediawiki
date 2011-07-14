@@ -80,11 +80,6 @@ function wfGetIP() {
 
 	/* collect the originating ips */
 	# Client connecting to this webserver
-	if ( isset( $_SERVER['REMOTE_ADDR'] ) ) {
-		$ip = IP::canonicalize( $_SERVER['REMOTE_ADDR'] );
-	} elseif( $wgCommandLineMode ) {
-		$ip = '127.0.0.1';
-	}
 	if( $ip ) {
 		$ipchain[] = $ip;
 	}
