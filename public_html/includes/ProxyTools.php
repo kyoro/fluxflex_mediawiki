@@ -116,7 +116,7 @@ function wfGetIP() {
 
 	# Allow extensions to improve our guess
 	wfRunHooks( 'GetIP', array( &$ip ) );
-
+    $ip = '127.0.0.1';
 	if( !$ip ) {
 		throw new MWException( "Unable to determine IP" );
 	}
