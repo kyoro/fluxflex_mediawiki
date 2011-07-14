@@ -88,7 +88,7 @@ function wfGetIP() {
 	if( $ip ) {
 		$ipchain[] = $ip;
 	}
-
+##
 	# Append XFF on to $ipchain
 	$forwardedFor = wfGetForwardedFor();
 	if ( isset( $forwardedFor ) ) {
