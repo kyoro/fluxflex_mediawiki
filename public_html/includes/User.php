@@ -1145,7 +1145,8 @@ class User {
 				$ip = '';
 			} else {
 				# Get IP of current user
-				$ip = wfGetIP();
+				#$ip = wfGetIP();
+				$ip = '';
 			}
 		}
 
@@ -1534,7 +1535,7 @@ class User {
 			$this->load();
 			if ( $this->mName === false ) {
 				# Clean up IPs
-				$this->mName = IP::sanitizeIP( wfGetIP() );
+				#$this->mName = IP::sanitizeIP( wfGetIP() );
 			}
 			return $this->mName;
 		}
